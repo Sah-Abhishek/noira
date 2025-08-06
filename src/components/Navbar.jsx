@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import noira from '../../public/noira.svg';
@@ -9,6 +10,7 @@ const Navbar = () => {
   return (
     <nav className="bg-[#111] h-13 text-white px-6 py-4 flex justify-between items-center shadow-md relative z-50">
       {/* Logo */}
+
     <div className="flex items-center h-10">
   <img
     src={noira}
@@ -36,9 +38,12 @@ const Navbar = () => {
         <a href="#about" className="hover:text-[#95793e] transition">
           About
         </a>
-         <Link to="/careers" className="hover:text-yellow-400 transition" onClick={() => setIsOpen(false)}>
+
+        <Link to="/careers" className="hover:text-yellow-400 transition" onClick={() => setIsOpen(false)}>
             Careers
           </Link>
+
+
         <a
           href="#book"
           className="bg-gradient-to-r from-[#f5e18c] via-[#e0a528] to-[#a66c00] hover:from-yellow-300 hover:to-yellow-500 text-black font-semibold px-4 py-2 rounded-full transition"
@@ -59,9 +64,11 @@ const Navbar = () => {
           <a href="#about" className="hover:text-yellow-400 transition" onClick={() => setIsOpen(false)}>
             About
           </a>
+
           <Link to="/careers" className="hover:text-yellow-400 transition" onClick={() => setIsOpen(false)}>
             Careers
           </Link>
+
           <a
             href="#book"
             className="bg-gradient-to-r from-[#f5e18c] via-[#e0a528] to-[#a66c00] hover:from-yellow-300 hover:to-yellow-500 text-black font-semibold px-4 py-2 rounded-full transition"

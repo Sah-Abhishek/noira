@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import career from '../../public/career.png'; 
 import euro from '../../public/euro.png'; 
