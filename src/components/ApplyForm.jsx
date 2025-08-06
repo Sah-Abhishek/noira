@@ -4,7 +4,7 @@ const ApplyForm = () => {
   return (
     <div className="bg-black text-white px-4 py-16" id="apply">
       {/* Heading */}
-      <h2 className="text-center text-3xl md:text-4xl text-[#C49E5B] font-serif mb-4">
+      <h2 className="text-center text-3xl md:text-4xl text-[#C49E5B] mb-4 hover:text-yellow-400">
         Apply Now
       </h2>
       <p className="text-center mb-10">
@@ -13,12 +13,12 @@ const ApplyForm = () => {
           href="mailto:careers@noiralondon.com"
           className="text-[#95793e] hover:underline"
         >
-          info@noira.co.uk
+          careers@noira.co.uk
         </a>
       </p>
 
       {/* Form Box */}
-      <div className="max-w-xl mx-auto border border-[#C49E5B]/20 p-6 md:p-10 rounded-[15px]">
+      {/* <div className="max-w-xl mx-auto border border-[#C49E5B]/20 p-6 md:p-10 rounded-[15px]">
         <form className="space-y-6">
           <div>
             <label className="block mb-1 text-sm">Full Name</label>
@@ -54,7 +54,7 @@ const ApplyForm = () => {
             Submit Application
           </button>
         </form>
-      </div>
+      </div> */}
     </div>
   );
 };

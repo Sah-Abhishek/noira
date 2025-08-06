@@ -1,5 +1,6 @@
 
 import React from 'react';
+import noira from '../../public/noira.svg';
 import { FaInstagram, FaFacebookF, FaTwitter, FaPhoneAlt, FaEnvelope, FaClock } from 'react-icons/fa';
 
 const Footer = () => {
@@ -9,16 +10,13 @@ const Footer = () => {
         {/* Logo & Description */}
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <div className="bg-yellow-400 w-8 h-8 rounded-full flex items-center justify-center text-black font-bold text-lg">
-              <img src='/logo.png' />
+            <div className=" w-30 h-30  flex items-center justify-center text-black font-bold text-lg">
+              <img src={noira} />
             </div>
-            <span className="text-yellow-400 font-bold text-lg">NOIRA</span>
-          </div>
-          <p className="text-gray-400 text-sm mb-4">
-            Premium wellness services delivered to your doorstep with luxury and care.
-          </p>
+              </div>
+         
           {/* Socials */}
-          <div className="flex gap-4 text-yellow-400 text-lg">
+          <div className="flex gap-4 ml-4 text-yellow-400 text-lg">
             <a href="#"><FaInstagram /></a>
             <a href="#"><FaFacebookF /></a>
             <a href="#"><FaTwitter /></a>
@@ -30,19 +28,19 @@ const Footer = () => {
           <h4 className="text-yellow-400 font-semibold mb-4">Services</h4>
           <ul className="space-y-2 text-sm text-gray-300">
             <li>Massage Therapy</li>
-            <li>Physiotherapy</li>
-            <li>Skincare</li>
-            <li>Wellness Coaching</li>
+            <li>Reflexology</li>
+            <li>Sports Massage</li>
+            <li>Deep tissue Massage</li>
           </ul>
         </div>
 
         {/* Contact */}
         <div>
           <h4 className="text-yellow-400 font-semibold mb-4">Contact</h4>
-          <ul className="space-y-3 text-sm text-gray-300">
+          <ul className="space-y-3 text-sm ml-33 text-gray-300">
             <li className="flex items-center gap-2">
               <FaPhoneAlt className="text-yellow-400" />
-              +1 (555) 123-4567
+              +44 7350 700055
             </li>
             <li className="flex items-center gap-2">
               <FaEnvelope className="text-yellow-400" />

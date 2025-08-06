@@ -30,8 +30,8 @@ const HeroSection = () => {
         <p className="text-gray-300 mb-8 text-base md:text-lg max-w-xl">
           Experience premium wellness services in the comfort of your home
         </p>
-        <button className="bg-gradient-to-r from-[#f5e18c] via-[#e0a528] to-[#a66c00] text-black font-semibold px-6 py-3 rounded-full hover:opacity-90 transition">
-          Book Therapy Near You
+        <button className=" bg-gradient-to-r from-[#f5e18c] via-[#e0a528] to-[#a66c00] text-black font-semibold px-6 py-3 rounded-full hover:opacity-90 transition">
+          Launching Soon
         </button>
       </div>
     </div>

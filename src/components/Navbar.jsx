@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-[#111] h-13 text-white px-6 py-4 flex justify-between items-center shadow-md relative z-50">
+    <nav className="bg-[#111] sticky top-0  h-13 text-white px-6 py-4 flex justify-between items-center shadow-md z-50">
       {/* Logo */}
 <Link to = "/">
     <div className="flex items-center h-10">
@@ -36,9 +36,9 @@ const Navbar = () => {
         <a href="#therapists" className="hover:text-[#C49E5B] transition">
           Therapists
         </a>
-        <a href="#about" className="hover:text-[#95793e] transition">
+        <Link to="/about" className="hover:text-yellow-400 transition" onClick={() => setIsOpen(false)}>
           About
-        </a>
+        </Link>
 
         <Link to="/careers" className="hover:text-yellow-400 transition" onClick={() => setIsOpen(false)}>
             Careers
@@ -47,7 +47,7 @@ const Navbar = () => {
 
         <a
           href="#book"
-          className="bg-gradient-to-r from-[#f5e18c] via-[#e0a528] to-[#a66c00] hover:from-yellow-300 hover:to-yellow-500 text-black font-semibold px-4 py-2 rounded-full transition"
+          className="hidden bg-gradient-to-r from-[#f5e18c] via-[#e0a528] to-[#a66c00] hover:from-yellow-300 hover:to-yellow-500 text-black font-semibold px-4 py-2 rounded-full transition"
         >
           Book Now
         </a>

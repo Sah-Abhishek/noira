@@ -25,7 +25,7 @@ const CareerPage = () => {
   <div className="relative z-20 text-white px-6 w-full max-w-5xl">
     <div className="flex flex-col items-start sm:items-start gap-6">
       {/* Title */}
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight">
+      <h1 className="text-4xl md:text-5xl lg:text-6xl  leading-tight">
         Where Prestige Meets Wellness
       </h1>
 

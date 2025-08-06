@@ -1,5 +1,5 @@
 import React from "react";
-import lady from "../../public/lady.png";
+
 import { FaCrown, FaStar, FaGlobeEurope, FaCheck } from "react-icons/fa";
 
 const CareerHighlights = () => {
@@ -7,7 +7,7 @@ const CareerHighlights = () => {
     <div className="text-white w-full">
       {/* Why Choose Section */}
       <div className="bg-black px-4 sm:px-6 md:px-16 py-12 sm:py-16">
-        <h2 className="text-center text-[#C49E5B] text-3xl md:text-4xl sm:text-3xl font-serif mb-10 sm:mb-12">
+        <h2 className="text-center text-[#C49E5B] text-3xl md:text-4xl sm:text-3xl mb-10 sm:mb-12">
           Why Choose NOIRA?
         </h2>
 
@@ -60,7 +60,7 @@ const CareerHighlights = () => {
           {/* Image */}
           <div className="flex-1 w-full flex justify-center">
             <img
-              src={lady}
+              src="https://imgs.search.brave.com/o89-CXJ-kdvIXXRSLUDyHtxORiw1WJNg6G6TBfy1ZH4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9m/cm9udC12aWV3LXdv/bWFuLXdvcmtpbmct/c3BhXzIzLTIxNTA5/MTE3NjQuanBnP3Nl/bXQ9YWlzX2h5YnJp/ZA"
               alt="Therapist"
               className="rounded-lg object-cover w-[250px] sm:w-[300px] h-auto"
             />

@@ -7,40 +7,60 @@ import cartWheel from '../assets/cartWheel.png';
 
 const services = [
   {
-    title: 'Massage Therapy',
+    title: 'Relaxing Massage',
     description: 'Relaxing full-body massage treatments',
-    price: '$80',
+    price: 'From £80',
     icon: devineHand,
   },
   {
-    title: 'Physiotherapy',
+    title: 'Deep tissue massage',
     description: 'Professional rehabilitation services',
-    price: '$90',
+    price: 'From £80',
     icon: dumbell,
   },
   {
-    title: 'Skincare',
+    title: 'Swedish Massage',
     description: 'Luxury facial and skincare treatments',
-    price: '$100',
+    price: 'From £78',
     icon: leave,
   },
   {
-    title: 'Wellness Coaching',
+    title: 'Lymphatic Drainage',
     description: 'Holistic health and lifestyle guidance',
-    price: '$70',
+    price: 'From £81',
     icon: heart,
   },
   {
-    title: 'Acupuncture',
+    title: 'Brazillian Lymphatic Drainage',
     description: 'Traditional healing therapy',
-    price: '$85',
+    price: 'From £91',
     icon: twoLeaves,
   },
   {
-    title: 'Private Yoga',
+    title: 'Pregnancy Massage',
     description: 'Personalized yoga sessions',
-    price: '$75',
+    price: 'From £79',
     icon: cartWheel,
+  },
+   {
+    title: 'Sports Massage',
+    description: 'Targeted relief for athletes',
+    price: 'From £81',
+    icon: dumbell,
+  },
+
+   {
+    title: 'De-Stress Massage',
+    description: 'Personalized relaxation techniques',
+    price: 'From £78',
+    icon: cartWheel,
+  },
+
+   {
+    title: 'Reflexology',
+    description: 'Personalized reflexology sessions',
+    price: 'From £83',
+    icon: heart,
   },
 ];
 
