@@ -1,15 +1,18 @@
 import React from 'react';
-import Sidebar from './components/Sidebar';
+
+import AppRoutes from './AppRoutes';
+import { BrowserRouter } from 'react-router-dom';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div className="flex">
-      <Sidebar />
-      <div className="flex-1 p-10 text-white bg-gray-900">
-        {/* Your routed components go here */}
-        <h1 className="text-2xl font-bold">Dashboard</h1>
-      </div>
+    <div >
+      <BrowserRouter>
+      <Navbar/>
+        <AppRoutes />
+      </BrowserRouter>
     </div>
+
   );
 }
 
