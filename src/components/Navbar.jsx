@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <nav className="bg-[#111] h-13 text-white px-6 py-4 flex justify-between items-center shadow-md relative z-50">
       {/* Logo */}
-
+<Link to = "/">
     <div className="flex items-center h-10">
   <img
     src={noira}
@@ -18,6 +18,7 @@ const Navbar = () => {
     className="h-20 sm:h-30"
   />
 </div>
+</Link>
 
       {/* Hamburger Icon - Mobile */}
       <button
