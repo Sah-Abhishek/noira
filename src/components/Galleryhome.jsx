@@ -40,7 +40,9 @@ const Galleryhome = () => {
     >
       {/* Title */}
       <motion.h3
-        className="text-3xl font-bold mb-6 text-center"
+
+        className="text-4xl font-braven text-[#D59940] font-whisper font-bold mb-6 text-center"
+
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}

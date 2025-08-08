@@ -3,6 +3,7 @@ body{
     margin: 0;
    padding: 0;
    box-sizing: border-box;  
+
 }
 /* index.css */
 /* global.css or in <style> tag */
@@ -17,3 +18,23 @@ body.dark {
 }
 
 
+@font-face {
+  font-family: 'WhisperingSignature';
+  src: url('./assets/WhisperingSignature.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BravenRegular';
+  src: url('./assets/BravenRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.font-whisper {
+  font-family: 'WhisperingSignature', cursive;
+}
+.font-braven {
+  font-family: 'BravenRegular', sans-serif;
+}

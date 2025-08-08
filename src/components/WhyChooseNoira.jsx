@@ -29,11 +29,11 @@ const WhyChooseNoira = () => {
   return (
     <section
       className={`py-16 px-6 text-center transition-colors duration-300 ${
-        isDarkMode ? "bg-[#111] text-white" : "bg-white text-black"
+        isDarkMode ? "bg-[#111] text-[#D59940]" : "bg-white text-black"
       }`}
     >
       {/* Heading */}
-      <h2 className="text-3xl md:text-4xl font-semibold mb-2">
+      <h2 className="text-3xl md:text-4xl font-braven font-semibold mb-2">
         Why Choose Noira Wellness
       </h2>
       <p
@@ -41,7 +41,7 @@ const WhyChooseNoira = () => {
           isDarkMode ? "text-gray-300" : "text-gray-600"
         }`}
       >
-        Premium mobile massage services designed for your lifestyle
+
       </p>
 
       {/* Features */}
@@ -50,12 +50,12 @@ const WhyChooseNoira = () => {
           <div key={index} className="flex flex-col items-center text-center">
             <div
               className={`w-16 h-16 flex items-center justify-center rounded-full mb-4 shadow-md transition-colors duration-300 ${
-                isDarkMode ? "bg-gray-800 text-yellow-400" : "bg-gray-100 text-gray-700"
+                isDarkMode ? "bg-gray-800 text-[#D59940]" : "bg-gray-100 text-gray-700"
               }`}
             >
               {feature.icon}
             </div>
-            <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>
+            <h3 className="font-semibold font-braven text-lg mb-2">{feature.title}</h3>
             <p
               className={`text-sm leading-relaxed ${
                 isDarkMode ? "text-gray-400" : "text-gray-600"

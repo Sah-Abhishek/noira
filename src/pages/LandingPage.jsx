@@ -19,6 +19,7 @@ const LandingPage = () => {
      
       <HowItWorks />
       <Featuredtherapists />
+
       <LandingVideoSection />
       <CtaSection />
       <Footer />

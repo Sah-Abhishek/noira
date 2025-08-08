@@ -2,6 +2,8 @@ import React from 'react';
 import { useTheme } from '../context/ThemeContext';
 import { motion } from 'framer-motion';
 
+import noira from "../../public/noira.svg";
+
 const HeroSection = () => {
   const { isDarkMode } = useTheme();
 
@@ -39,14 +41,20 @@ const HeroSection = () => {
         initial="hidden"
         animate="visible"
       >
-        <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-          Luxury <span className="text-[#C49E5B]">Therapy</span>
+
+        
+        <h1 className="text-5xl flex flex-col font-whisper md:text-6xl font-bold mb-4 leading-tight">
+           <img src={noira} alt="Logo" className="h-20 sm:h-100 text-center -mt-20 items-center " />
+         {/* <div>
+Luxury <span className="text-[#C49E5B]">Therapy</span>
+         </div> */}
+          
         </h1>
-        <h2 className="text-2xl md:text-3xl mb-6 font-semibold">At Your Doorstep</h2>
-        <p className={`mb-8 text-base md:text-lg max-w-xl ${textSub}`}>
+        <h2 className="text-2xl md:text-5xl -mt-25 mb-20 text-[#C49E5B] font-whisper font-semibold">Luxury Without Noise</h2>
+        {/* <p className={`mb-18 text-base md:text-lg max-w-xl ${textSub}`}>
           Experience premium wellness services in the comfort of your home
-        </p>
-        <button className="bg-gradient-to-r from-[#f5e18c] via-[#e0a528] to-[#a66c00] text-black font-semibold px-6 py-3 rounded-full hover:opacity-90 transition">
+        </p> */}
+        <button className="bg-[#C49E5B] text-black font-semibold px-6 py-3 rounded-full hover:opacity-90 transition">
           Launching Soon
         </button>
       </motion.div>
