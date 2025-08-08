@@ -4,7 +4,7 @@ import { useTheme } from '../context/ThemeContext';
 const HeroSection = () => {
   const { isDarkMode } = useTheme();
 
-  const overlayColor = isDarkMode ? 'bg-black/50' : 'bg-white/30';
+  const overlayColor = isDarkMode ? 'bg-black/50' : 'bg-white/10';
   const textMain = isDarkMode ? 'text-white' : 'text-gray-900';
   const textSub = isDarkMode ? 'text-gray-300' : 'text-gray-600';
 

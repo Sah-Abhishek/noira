@@ -148,7 +148,7 @@ const FeaturedTherapists = () => {
             </div>
 
             {/* Book Now Button */}
-            <button className="mt-6 bg-gradient-to-r from-[#f5e18c]/50 via-[#e0a528] to-[#a66c00] w-full text-black font-semibold px-6 py-2 rounded-full hover:opacity-90 transition">
+            <button className="mt-6 bg-gradient-to-r from-[#eac54e] via-[#c3880a] to-[#a66c00] w-full text-black font-semibold px-6 py-2 rounded-full hover:opacity-90 transition">
               Book Now
             </button>
           </div>

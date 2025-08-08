@@ -10,6 +10,8 @@ import BrandShowcase from '../components/BrandShowCase.jsx'
 const LandingPage = () => {
   return (
     <div>
+      {/* Hero Section */}
+      {/* Ensure the HeroSection is at the top of the page */}  
       <HeroSection />
  
       <Services />
