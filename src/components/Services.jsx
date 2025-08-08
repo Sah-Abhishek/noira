@@ -7,6 +7,7 @@ import twoLeaves from '../assets/twoLeaves.png';
 import cartWheel from '../assets/cartWheel.png';
 import { FaArrowRight } from 'react-icons/fa';
 import { useTheme } from '../context/ThemeContext'; // make sure path is correct
+import { motion } from 'framer-motion';
 
 const services = [
   {
@@ -53,6 +54,11 @@ const services = [
   },
 ];
 
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
 const Services = () => {
   const { isDarkMode } = useTheme();
 
@@ -68,21 +74,32 @@ const Services = () => {
       id="services"
     >
       {/* Section Header */}
-      <div className="text-center mb-12">
+      <motion.div
+        className="text-center mb-12"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+      >
         <h2 className="text-3xl sm:text-4xl font-bold">
           Our <span className="text-[#C49E5B]">Services</span>
         </h2>
         <p className={`${descriptionText} mt-4 text-sm sm:text-base`}>
           Premium wellness treatments tailored to your needs
         </p>
-      </div>
+      </motion.div>
 
       {/* Services Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => (
-          <div
+          <motion.div
             key={index}
             className={`${cardBg} border-b-2 ${borderColor} rounded-xl p-6 transition duration-300 shadow-lg hover:shadow-[#C49E5B]/30 hover:scale-105`}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            transition={{ delay: index * 0.15 }}
           >
             <h3 className={`text-lg flex items-center gap-3 sm:text-2xl font-semibold mb-2 ${titleBg} px-4 py-2 rounded-2xl text-[#C49E5B]`}>
               <div className="bg-gradient-to-r from-[#f5e18c] via-[#e0a528] to-[#a66c00] w-12 h-12 rounded-full flex items-center justify-center overflow-hidden">
@@ -90,6 +107,7 @@ const Services = () => {
                   src={service.icon}
                   alt={service.title}
                   className="w-6 h-6 object-contain"
+                  loading="lazy"
                 />
               </div>
               {service.title}
@@ -107,7 +125,7 @@ const Services = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

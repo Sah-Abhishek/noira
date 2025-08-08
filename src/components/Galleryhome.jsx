@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useTheme } from "../context/ThemeContext";
+import { motion } from "framer-motion";
 import photo1 from "/photo1.jpg";
 import photo3 from "/photo2.jpg";
 import photo2 from "/photo3.jpg";
@@ -25,7 +26,6 @@ const Galleryhome = () => {
     setOpen(true);
     document.body.style.overflow = "hidden";
   };
-
   const closeLightbox = () => {
     setOpen(false);
     setActive(null);
@@ -38,19 +38,32 @@ const Galleryhome = () => {
         isDarkMode ? "bg-[#111] text-white" : "bg-white text-black"
       }`}
     >
-      <h3 className="text-3xl font-bold mb-6 text-center">Photo Gallery</h3>
-
-      <div
-        className={`grid grid-cols-4 gap-6 auto-rows-[12rem] md:auto-rows-[16rem] lg:auto-rows-[20rem] grid-flow-dense`}
+      {/* Title */}
+      <motion.h3
+        className="text-3xl font-bold mb-6 text-center"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
       >
+        Photo Gallery
+      </motion.h3>
+
+      {/* Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-[12rem] md:auto-rows-[16rem] lg:auto-rows-[20rem] grid-flow-dense">
+
         {images.map((item, idx) => (
-          <div
+          <motion.div
             key={idx}
-            className="relative overflow-hidden rounded-2xl shadow-lg transform transition-transform duration-300 hover:scale-[1.01] cursor-pointer will-change-transform"
+            className="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer"
             style={{
               gridColumn: item.size === "large" ? "span 2" : "span 1",
               gridRow: item.size === "large" ? "span 2" : "span 1",
             }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: idx * 0.1 }}
+            viewport={{ once: true }}
             onClick={() => openLightbox(item)}
           >
             <img
@@ -59,35 +72,36 @@ const Galleryhome = () => {
               className="w-full h-full object-cover block"
               draggable={false}
               loading="lazy"
-              decoding="async"
-              style={{ transform: "translateZ(0)" }}
             />
-          </div>
+          </motion.div>
         ))}
       </div>
 
+      {/* Lightbox */}
       {open && active && (
-        <div
+        <motion.div
           className="fixed inset-0 z-50 flex items-center justify-center p-6"
           onClick={closeLightbox}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
         >
           <div
             className={`absolute inset-0 ${
               isDarkMode ? "bg-black/80" : "bg-gray-200/80"
             }`}
           />
-          <div
+          <motion.div
             className={`relative max-w-[90vw] max-h-[90vh] rounded-xl overflow-hidden shadow-2xl ${
               isDarkMode ? "bg-black" : "bg-white"
             }`}
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.4 }}
           >
             <img
               src={active.src}
               alt={active.alt}
               className="w-full h-full object-contain max-h-[90vh] block"
-              loading="lazy"
-              decoding="async"
-              style={{ transform: "translateZ(0)" }}
             />
             <button
               onClick={closeLightbox}
@@ -97,8 +111,8 @@ const Galleryhome = () => {
             >
               ✕
             </button>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       )}
     </div>
   );
