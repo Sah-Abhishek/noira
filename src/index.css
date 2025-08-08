@@ -1,0 +1,19 @@
+@import "tailwindcss";
+body{
+    margin: 0;
+   padding: 0;
+   box-sizing: border-box;  
+}
+/* index.css */
+/* global.css or in <style> tag */
+body.light {
+  background-color: white;
+  color: black;
+}
+
+body.dark {
+  background-color: #111;
+  color: white;
+}
+
+
