@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useTheme } from "../context/ThemeContext"; // <-- Theme context hook
+import { useTheme } from "../context/ThemeContext";
 import photo1 from "/photo1.jpg";
 import photo3 from "/photo2.jpg";
 import photo2 from "/photo3.jpg";
@@ -7,7 +7,7 @@ import photo4 from "/photo4.jpg";
 import photo5 from "/photo5.jpg";
 
 const Galleryhome = () => {
-  const { isDarkMode } = useTheme(); // Theme hook
+  const { isDarkMode } = useTheme();
 
   const images = [
     { src: photo1, alt: "Image 1", size: "large" },
@@ -25,6 +25,7 @@ const Galleryhome = () => {
     setOpen(true);
     document.body.style.overflow = "hidden";
   };
+
   const closeLightbox = () => {
     setOpen(false);
     setActive(null);
@@ -45,7 +46,7 @@ const Galleryhome = () => {
         {images.map((item, idx) => (
           <div
             key={idx}
-            className="relative overflow-hidden rounded-2xl shadow-lg transform transition duration-300 hover:scale-[1.02] cursor-pointer"
+            className="relative overflow-hidden rounded-2xl shadow-lg transform transition-transform duration-300 hover:scale-[1.01] cursor-pointer will-change-transform"
             style={{
               gridColumn: item.size === "large" ? "span 2" : "span 1",
               gridRow: item.size === "large" ? "span 2" : "span 1",
@@ -57,6 +58,9 @@ const Galleryhome = () => {
               alt={item.alt}
               className="w-full h-full object-cover block"
               draggable={false}
+              loading="lazy"
+              decoding="async"
+              style={{ transform: "translateZ(0)" }}
             />
           </div>
         ))}
@@ -67,7 +71,6 @@ const Galleryhome = () => {
           className="fixed inset-0 z-50 flex items-center justify-center p-6"
           onClick={closeLightbox}
         >
-          {/* Background overlay adapts to theme */}
           <div
             className={`absolute inset-0 ${
               isDarkMode ? "bg-black/80" : "bg-gray-200/80"
@@ -82,13 +85,14 @@ const Galleryhome = () => {
               src={active.src}
               alt={active.alt}
               className="w-full h-full object-contain max-h-[90vh] block"
+              loading="lazy"
+              decoding="async"
+              style={{ transform: "translateZ(0)" }}
             />
             <button
               onClick={closeLightbox}
               className={`absolute top-3 right-3 rounded-full p-2 shadow ${
-                isDarkMode
-                  ? "bg-white text-black"
-                  : "bg-black text-white"
+                isDarkMode ? "bg-white text-black" : "bg-black text-white"
               }`}
             >
               ✕
