@@ -56,10 +56,10 @@ const services = [
 const Services = () => {
   const { isDarkMode } = useTheme();
 
-  const sectionBg = isDarkMode ? 'bg-black text-white' : 'bg-white text-black';
+  const sectionBg = isDarkMode ? 'bg-black text-white' : 'bg-gray-200/70 text-black';
   const descriptionText = isDarkMode ? 'text-gray-400' : 'text-gray-600';
-  const cardBg = isDarkMode ? 'bg-[#1a1a1a]' : 'bg-gray-100';
-  const borderColor = isDarkMode ? 'border-white/20' : 'border-gray-300';
+  const cardBg = isDarkMode ? 'bg-[#1a1a1a]' : 'bg-white';
+  const borderColor = isDarkMode ? 'border-white/20' : 'border-gray-300/40';
 
   return (
     <section
@@ -81,9 +81,9 @@ const Services = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className={`${cardBg} border ${borderColor} rounded-xl p-6 transition duration-300 hover:shadow-lg hover:shadow-[#C49E5B]/30 hover:scale-105`}
+            className={`${cardBg} border ${borderColor} rounded-xl p-6 transition duration-300 shadow-lg hover:shadow-[#C49E5B]/30 hover:scale-105`}
           >
-            <h3 className="text-lg flex items-center gap-3 sm:text-2xl font-semibold mb-2 bg-yellow-300/10 px-4 py-2 rounded-2xl text-[#C49E5B]">
+            <h3 className="text-lg flex items-center gap-3 sm:text-2xl font-semibold mb-2 bg-gray-100/70 px-4 py-2 rounded-2xl text-[#C49E5B]">
               <div className="bg-gradient-to-r from-[#f5e18c] via-[#e0a528] to-[#a66c00] w-12 h-12 rounded-full flex items-center justify-center overflow-hidden">
                 <img
                   src={service.icon}
@@ -100,7 +100,7 @@ const Services = () => {
               {service.prices.map((price, idx) => (
                 <li
                   key={idx}
-                  className="flex items-center text-md -ml-4 bg-yellow-600/10 rounded-2xl px-4 py-2"
+                  className="flex items-center text-md -ml-4 bg-gray-200/70 rounded-2xl px-4 py-2"
                 >
                   <FaArrowRight className="text-xs mr-2 text-yellow-500" /> {price}
                 </li>

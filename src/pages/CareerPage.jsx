@@ -19,7 +19,7 @@ const CareerPage = () => {
         style={{ backgroundImage: `url(${career})` }}
       >
         {/* Overlay */}
-        <div className="absolute bg-black/65 inset-0 z-10" />
+        {/* <div className="absolute bg-black inset-0 z-10" /> */}
 
         {/* Content */}
         <div className="relative z-20 px-6 w-full max-w-5xl">

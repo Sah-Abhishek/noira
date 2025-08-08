@@ -10,10 +10,13 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`sticky top-0 h-13 px-6 py-4 flex justify-between items-center shadow-md z-50 transition-all duration-300 ${
-        isDarkMode ? "bg-[#111] text-white" : "bg-white text-black"
-      }`}
-    >
+  className={`z-99 fixed top-4 left-1/2 transform -translate-x-1/2 
+px-4 sm:px-6 py-2 flex justify-between items-center 
+backdrop-blur-md bg-opacity-40 shadow-lg rounded-full 
+transition-all duration-300 
+${isDarkMode ? "bg-[#111]/60 text-white" : "bg-white/60 text-black"} 
+max-w-6xl w-[90%]`}
+   >
       {/* Logo */}
       <Link to="/">
         <div className="flex items-center h-10">
@@ -67,8 +70,8 @@ const Navbar = () => {
         {/* Theme Toggle Button */}
         <button
           onClick={toggleTheme}
-          className="ml-4 text-xl p-2 rounded-full border border-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition"
-          title="Toggle theme"
+          className="ml-4 text-sm p-2 rounded-full border border-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+          title={`${isDarkMode ? "light" : "dark"} mode`}
         >
           {isDarkMode ? <FaSun /> : <FaMoon />}
         </button>
