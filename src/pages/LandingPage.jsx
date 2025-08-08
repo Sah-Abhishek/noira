@@ -5,6 +5,7 @@ import Featuredtherapists from '../components/FeaturedTherapist.jsx'
 import CtaSection from '../components/CtaSection.jsx'
 import Footer from '../components/FooterSection.jsx'
 import HowItWorks from '../components/HowItWorks.jsx'
+import LandingVideoSection from '../components/VideoHome.jsx'
 
 const LandingPage = () => {
   return (
@@ -13,6 +14,7 @@ const LandingPage = () => {
       <Services />
       <HowItWorks />
       <Featuredtherapists />
+      <LandingVideoSection />
       <CtaSection />
       <Footer />
     </div>
