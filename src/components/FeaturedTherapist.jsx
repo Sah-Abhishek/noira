@@ -71,7 +71,7 @@ const FeaturedTherapists = () => {
           >
             {/* Avatar */}
             <div className="flex justify-center mb-4">
-              <div className="w-20 h-20 rounded-full border-4 border-yellow-400 overflow-hidden">
+              <div className="w-20 h-20 rounded-full border-1 border-yellow-400 overflow-hidden">
                 {therapist.image ? (
                   <img
                     src={therapist.image}
@@ -148,7 +148,7 @@ const FeaturedTherapists = () => {
             </div>
 
             {/* Book Now Button */}
-            <button className="mt-6 bg-gradient-to-r from-[#eac54e] via-[#c3880a] to-[#a66c00] w-full text-black font-semibold px-6 py-2 rounded-full hover:opacity-90 transition">
+            <button className="mt-6 bg-[#C49E5B] w-full text-black font-semibold px-6 py-2 rounded-full shadow-lg shadow-[#C49E5B]/25 hover:shadow-[#C49E5B]/40 transform hover:scale-105 transition-all duration-300">
               Book Now
             </button>
           </div>

@@ -7,13 +7,16 @@ import Footer from '../components/FooterSection.jsx'
 import HowItWorks from '../components/HowItWorks.jsx'
 import Galleryhome from '../components/Galleryhome.jsx'
 import LandingVideoSection from '../components/VideoHome.jsx'
+import WhyChooseNoira from '../components/WhyChooseNoira.jsx'
 
 const LandingPage = () => {
   return (
     <div>
       <HeroSection />
+      <WhyChooseNoira />
+       <Galleryhome /> 
       <Services />
-      <Galleryhome /> 
+     
       <HowItWorks />
       <Featuredtherapists />
       <LandingVideoSection />
