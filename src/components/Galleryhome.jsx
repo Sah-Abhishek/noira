@@ -21,16 +21,16 @@ const Galleryhome = () => {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(null);
 
-  const openLightbox = (item) => {
-    setActive(item);
-    setOpen(true);
-    document.body.style.overflow = "hidden";
-  };
-  const closeLightbox = () => {
-    setOpen(false);
-    setActive(null);
-    document.body.style.overflow = "";
-  };
+  // const openLightbox = (item) => {
+  //   setActive(item);
+  //   setOpen(true);
+  //   document.body.style.overflow = "hidden";
+  // };
+  // const closeLightbox = () => {
+  //   setOpen(false);
+  //   setActive(null);
+  //   document.body.style.overflow = "";
+  // };
 
   return (
     <div
@@ -66,7 +66,7 @@ const Galleryhome = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: idx * 0.1 }}
             viewport={{ once: true }}
-            onClick={() => openLightbox(item)}
+            // onClick={() => openLightbox(item)}
           >
             <img
               src={item.src}
@@ -83,7 +83,7 @@ const Galleryhome = () => {
       {open && active && (
         <motion.div
           className="fixed inset-0 z-50 flex items-center justify-center p-6"
-          onClick={closeLightbox}
+          // onClick={closeLightbox}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
@@ -106,7 +106,7 @@ const Galleryhome = () => {
               className="w-full h-full object-contain max-h-[90vh] block"
             />
             <button
-              onClick={closeLightbox}
+              // onClick={closeLightbox}
               className={`absolute top-3 right-3 rounded-full p-2 shadow ${
                 isDarkMode ? "bg-white text-black" : "bg-black text-white"
               }`}

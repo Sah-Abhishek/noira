@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes, FaSun, FaMoon } from "react-icons/fa";
-import noira from "../../public/noira.svg";
+import noira from "/noira.svg";
 import { useTheme } from "../context/ThemeContext"; // adjust the path if needed
 
 const Navbar = () => {
