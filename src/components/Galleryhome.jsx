@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useTheme } from "../context/ThemeContext";
 import { motion } from "framer-motion";
-import photo1 from "/photo1.jpg";
-import photo3 from "/photo2.jpg";
-import photo2 from "/photo3.jpg";
-import photo4 from "/photo4.jpg";
-import photo5 from "/photo5.jpg";
+import photo1 from "/photol1.webp";
+import photo3 from "/photol2.jpg";
+import photo2 from "/photol3.jpg";
+import photo4 from "/photol4.jpg";
+import photo5 from "/photol8.jpg";
 
 const Galleryhome = () => {
   const { isDarkMode } = useTheme();
@@ -38,17 +38,17 @@ const Galleryhome = () => {
         }`}
     >
       {/* Title */}
-      <motion.h3
-
-        className="text-4xl font-braven text-[#D59940] font-whisper font-bold mb-6 text-center"
-
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        Photo Gallery
-      </motion.h3>
+      {/* <motion.h3 */}
+      {/**/}
+      {/*   className="text-4xl font-braven text-[#D59940] font-whisper font-bold mb-6 text-center" */}
+      {/**/}
+      {/*   initial={{ opacity: 0, y: 30 }} */}
+      {/*   whileInView={{ opacity: 1, y: 0 }} */}
+      {/*   transition={{ duration: 0.6 }} */}
+      {/*   viewport={{ once: true }} */}
+      {/* > */}
+      {/*   Photo Gallery */}
+      {/* </motion.h3> */}
 
       {/* Grid */}
       <div className="grid grid-cols-1 mt-20 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-[12rem] md:auto-rows-[16rem] lg:auto-rows-[20rem] grid-flow-dense">
