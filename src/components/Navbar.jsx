@@ -68,19 +68,19 @@ max-w-6xl w-[90%]`}
         </a>
 
         {/* Theme Toggle Button */}
-        <button
-          onClick={toggleTheme}
-          className="ml-4 text-sm p-2 rounded-full border border-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition"
-          title={`${isDarkMode ? "light" : "dark"} mode`}
-        >
-          {isDarkMode ? <FaSun /> : <FaMoon />}
-        </button>
+        {/* <button */}
+        {/*   onClick={toggleTheme} */}
+        {/*   className="ml-4 text-sm p-2 rounded-full border border-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition" */}
+        {/*   title={`${isDarkMode ? "light" : "dark"} mode`} */}
+        {/* > */}
+        {/*   {isDarkMode ? <FaSun /> : <FaMoon />} */}
+        {/* </button> */}
       </div>
 
       {/* Mobile Nav */}
       {isOpen && (
         <div
-          className={`absolute top-14 left-0 w-full px-6 py-4 flex flex-col items-start gap-4 md:hidden transition-all duration-300 ${isDarkMode ? "bg-[#111] text-white" : "bg-white text-black"
+          className={`absolute rounded-xl backdrop-blur-md bg-opacity-40 mt-5 top-14 left-0 w-full px-6 py-4 flex flex-col items-start gap-4 md:hidden transition-all duration-300 ${isDarkMode ? "bg-[#111] text-white" : "bg-white text-black"
             }`}
         >
           <a
@@ -120,20 +120,20 @@ max-w-6xl w-[90%]`}
           </a>
 
           {/* Theme Toggle - Mobile */}
-          <button
-            onClick={toggleTheme}
-            className="mt-2 flex items-center gap-2 text-sm px-3 py-1 border rounded-full border-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition"
-          >
-            {isDarkMode ? (
-              <>
-                <FaSun /> Light Mode
-              </>
-            ) : (
-              <>
-                <FaMoon /> Dark Mode
-              </>
-            )}
-          </button>
+          {/* <button */}
+          {/*   onClick={toggleTheme} */}
+          {/*   className="mt-2 flex items-center gap-2 text-sm px-3 py-1 border rounded-full border-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition" */}
+          {/* > */}
+          {/*   {isDarkMode ? ( */}
+          {/*     <> */}
+          {/*       <FaSun /> Light Mode */}
+          {/*     </> */}
+          {/*   ) : ( */}
+          {/*     <> */}
+          {/*       <FaMoon /> Dark Mode */}
+          {/*     </> */}
+          {/*   )} */}
+          {/* </button> */}
         </div>
       )}
     </nav>

@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
 
           <div className="flex gap-4 text-yellow-500 text-lg">
-            <a href="#" aria-label="Instagram" className="hover:opacity-80">
+            <a href="https://www.instagram.com/noira_london?igsh=MTNsN3E0YTJ0MDU3Zw==" aria-label="Instagram" className="hover:opacity-80">
               <FaInstagram />
             </a>
             <a href="#" aria-label="Facebook" className="hover:opacity-80">
@@ -45,10 +45,12 @@ const Footer = () => {
         <div>
           <h4 className="text-yellow-500 font-semibold mb-4">Services</h4>
           <ul className={`space-y-2 text-sm ${mutedText}`}>
-            <li>Massage Therapy</li>
-            <li>Reflexology</li>
-            <li>Sports Massage</li>
-            <li>Deep Tissue Massage</li>
+            <li>Quick Reset</li>
+            <li>Deep Comfort Massage</li>
+            <li>Jet Lag Reset</li>
+            <li>The Executive Reset</li>
+            <li>Couple’s Bespoke Escape</li>
+            <li>The Black Label Experience</li>
           </ul>
         </div>
 
