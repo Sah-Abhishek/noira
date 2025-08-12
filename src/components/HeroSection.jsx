@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTheme } from '../context/ThemeContext';
 import { motion } from 'framer-motion';
-import noira from "../../public/noira.svg";
+import noira from "/noira.png";
 
 const HeroSection = () => {
   const { isDarkMode } = useTheme();
@@ -46,16 +46,16 @@ const HeroSection = () => {
 
         {/* Logo */}
         <div className="my-6">
-          <img src={noira} alt="Logo" className="h-60 sm:h-60 -mt-10 sm:mt-5 mx-auto" />
+          <img src={noira} alt="Logo" className="h-20  sm:h-30 mb-8 sm:mb-10 sm:mt-5 mx-auto" />
         </div>
 
         {/* Subheading */}
-        <h2 className="text-xl -mt-10 sm:text-2xl md:text-4xl text-[#C49E5B] font-whisper font-semibold mb-4 px-2">
+        <h2 className="text-xl mb-10 sm:text-2xl md:text-4xl text-[#C49E5B] font-whisper font-semibold mb-4 px-2">
           Luxury Without Noise
         </h2>
 
         {/* Description */}
-        <h3 className="text-lg sm:text-lg md:text-2xl text-[#C49E5B] font-whisper font-medium mb-8 px-4 max-w-[90%] sm:max-w-[80%]">
+        <h3 className="text-lg sm:text-lg md:text-2xl text-[#C49E5B] font-whisper font-bold mb-8 px-4 max-w-[90%] sm:max-w-[80%]">
           The discreet indulgence London’s elite whisper about. By invitation only.
         </h3>
 

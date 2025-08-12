@@ -1,5 +1,5 @@
 import React from 'react';
-import noira from '../../public/noira.svg';
+import noira from '/noira.png';
 import {
   FaInstagram,
   FaFacebookF,

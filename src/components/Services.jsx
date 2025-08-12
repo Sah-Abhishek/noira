@@ -16,42 +16,42 @@ const services = [
     description: 'An express immersion for back, neck, and shoulders — melting tension inminutes, awakening the senses.',
     prices: ['45 mins – £65'],
     icon: devineHand,
-    image: '/photo1.jpg'
+    image: '/quick-reset.png'
   },
   {
     title: 'Deep Comfort Massage',
     description: 'Slow, precise, muscle-focused indulgence that releases knots,restores balance, and quiets the mind.',
     prices: ['60 mins – £85', '90 mins – £120', '120 mins – £155', '150 mins – £190'],
     icon: dumbell,
-    image: '/photo2.jpg'
+    image: '/deep-comfort.png'
   },
   {
     title: 'Jet Lag Reset',
     description: 'A circulation-boosting ritual that reduces swelling, reawakens energy,and leaves your body light and renewed',
     prices: ['60 mins – £95', '90 mins – £135', '120 mins – £175', '150 mins – £215'],
     icon: leave,
-    image: '/photo3.jpg',
+    image: '/jet-lag.png',
   },
   {
     title: 'The Executive Reset',
     description: 'Deep tissue meets refined pressure-point therapy — a focused revival for mental clarity and physical ease.',
     prices: ['60 mins – £105', '90 mins – £145', '120 mins – £185'],
     icon: heart,
-    image: '/photo4.jpg'
+    image: '/executive-reset.png'
   },
   {
     title: 'Couple’s Bespoke Escape',
     description: 'Two therapists in perfect synchrony — an intimate shared indulgence for private moments.',
     prices: ['60 mins – £180', '90 mins – £250', '120 mins – £320'],
     icon: twoLeaves,
-    image: '/photo3.jpg'
+    image: '/couples-massage.png'
   },
   {
     title: 'The Black Label Experience',
     description: 'Full-body indulgence with warm oil infusion and flowing strokes — the ultimate Noira signature.',
     prices: ['60 mins – £115', '90 mins – £155', '120 mins – £195'],
     icon: cartWheel,
-    image: '/photo5.jpg'
+    image: '/black-label.png'
   },
   // {
   //   title: 'The Black Label Experience',

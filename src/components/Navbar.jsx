@@ -10,17 +10,17 @@ const Navbar = () => {
 
   return (
     <nav
-  className={`z-99 fixed top-4 left-1/2 transform -translate-x-1/2 
+      className={`z-99 fixed top-4 left-1/2 transform -translate-x-1/2 
 px-4 sm:px-6 py-2 flex justify-between items-center 
 backdrop-blur-md bg-opacity-40 shadow-lg rounded-full 
 transition-all duration-300 
 ${isDarkMode ? "bg-[#111]/60 text-white" : "bg-white/60 text-black"} 
 max-w-6xl w-[90%]`}
-   >
+    >
       {/* Logo */}
       <Link to="/">
         <div className="flex items-center h-10">
-          <img src={noira} alt="Logo" className="h-20 sm:h-30" />
+          <img src={noira} alt="Logo" className="h-20 sm:h-25" />
         </div>
       </Link>
 
@@ -80,9 +80,8 @@ max-w-6xl w-[90%]`}
       {/* Mobile Nav */}
       {isOpen && (
         <div
-          className={`absolute top-14 left-0 w-full px-6 py-4 flex flex-col items-start gap-4 md:hidden transition-all duration-300 ${
-            isDarkMode ? "bg-[#111] text-white" : "bg-white text-black"
-          }`}
+          className={`absolute top-14 left-0 w-full px-6 py-4 flex flex-col items-start gap-4 md:hidden transition-all duration-300 ${isDarkMode ? "bg-[#111] text-white" : "bg-white text-black"
+            }`}
         >
           <a
             href="#services"

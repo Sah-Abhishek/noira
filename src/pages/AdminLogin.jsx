@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import '../index.css'
 import { zoomies } from 'ldrs'
 zoomies.register()
-import noira from "/noira.svg";
+import noira from "/noira.png";
 import {
   FaUserMd,
   FaUser,
@@ -83,7 +83,7 @@ export default function AdminLogin() {
         {/* Logo and Title */}
         <div className="flex flex-col items-center space-y-2">
           <div className="flex items-center h-10 mt-10">
-            <img src={noira} alt="Logo" className="h-50 sm:h-50 mb-10" />
+            <img src={noira} alt="Logo" className="h-10 sm:h-15 mb-10" />
           </div>
           <p className="text-gray-400 text-medium font-medium">Wellness Platform</p>
         </div>
