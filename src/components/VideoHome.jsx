@@ -3,7 +3,9 @@ import React from 'react';
 function AutoPlayVideo() {
   return (
     <div className="bg-black text-white py-12 px-4 text-center">
-      <h2 className="text-3xl md:text-4xl font-bold text-yellow-500 mb-10">
+      <h2
+        className="text-4xl font-braven text-[#D59940] font-whisper font-bold mb-6 text-center"
+      >
         At Home Treatment
       </h2>
 

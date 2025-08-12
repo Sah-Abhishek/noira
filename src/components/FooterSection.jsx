@@ -78,8 +78,7 @@ const Footer = () => {
 
       {/* Divider */}
       <div className={`border-t ${divider} mt-10 pt-6 text-center text-sm ${mutedText}`}>
-        © 2025 NOIRA. All rights reserved.
-      </div>
+        © 2025 NOIRA. A luxury without noise. Available to the discerning few      </div>
     </footer>
   );
 };

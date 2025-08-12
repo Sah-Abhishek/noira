@@ -34,9 +34,8 @@ const Galleryhome = () => {
 
   return (
     <div
-      className={`w-full p-10 transition-colors duration-300 ${
-        isDarkMode ? "bg-[#111] text-white" : "bg-white text-black"
-      }`}
+      className={`w-full p-10 transition-colors duration-300 ${isDarkMode ? "bg-[#111] text-white" : "bg-white text-black"
+        }`}
     >
       {/* Title */}
       <motion.h3
@@ -52,7 +51,7 @@ const Galleryhome = () => {
       </motion.h3>
 
       {/* Grid */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-[12rem] md:auto-rows-[16rem] lg:auto-rows-[20rem] grid-flow-dense">
+      <div className="grid grid-cols-1 mt-20 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-[12rem] md:auto-rows-[16rem] lg:auto-rows-[20rem] grid-flow-dense">
 
         {images.map((item, idx) => (
           <motion.div
@@ -66,7 +65,7 @@ const Galleryhome = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: idx * 0.1 }}
             viewport={{ once: true }}
-            // onClick={() => openLightbox(item)}
+          // onClick={() => openLightbox(item)}
           >
             <img
               src={item.src}
@@ -88,14 +87,12 @@ const Galleryhome = () => {
           animate={{ opacity: 1 }}
         >
           <div
-            className={`absolute inset-0 ${
-              isDarkMode ? "bg-black/80" : "bg-gray-200/80"
-            }`}
+            className={`absolute inset-0 ${isDarkMode ? "bg-black/80" : "bg-gray-200/80"
+              }`}
           />
           <motion.div
-            className={`relative max-w-[90vw] max-h-[90vh] rounded-xl overflow-hidden shadow-2xl ${
-              isDarkMode ? "bg-black" : "bg-white"
-            }`}
+            className={`relative max-w-[90vw] max-h-[90vh] rounded-xl overflow-hidden shadow-2xl ${isDarkMode ? "bg-black" : "bg-white"
+              }`}
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.4 }}
@@ -107,9 +104,8 @@ const Galleryhome = () => {
             />
             <button
               // onClick={closeLightbox}
-              className={`absolute top-3 right-3 rounded-full p-2 shadow ${
-                isDarkMode ? "bg-white text-black" : "bg-black text-white"
-              }`}
+              className={`absolute top-3 right-3 rounded-full p-2 shadow ${isDarkMode ? "bg-white text-black" : "bg-black text-white"
+                }`}
             >
               ✕
             </button>

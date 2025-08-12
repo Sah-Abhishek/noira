@@ -8,16 +8,19 @@ import HowItWorks from '../components/HowItWorks.jsx'
 import Galleryhome from '../components/Galleryhome.jsx'
 import LandingVideoSection from '../components/VideoHome.jsx'
 import WhyChooseNoira from '../components/WhyChooseNoira.jsx'
+import MembershipSection from '../components/MembershipSection.jsx'
 
 const LandingPage = () => {
   return (
     <div>
       <HeroSection />
       <WhyChooseNoira />
-       <Galleryhome /> 
+      <Galleryhome />
       <Services />
-     
+
       <HowItWorks />
+      <MembershipSection />
+
       <Featuredtherapists />
 
       <LandingVideoSection />

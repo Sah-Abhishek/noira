@@ -43,31 +43,29 @@ const FeaturedTherapists = () => {
   return (
     <section
       id="therapists"
-      className={`py-20 px-6 md:px-20 scroll-mt-24 ${
-        isDarkMode
-          ? 'bg-gradient-to-l from-[#0f1118] to-black text-white'
-          : 'bg-gradient-to-l from-[#f9f9f9] to-white text-black'
-      }`}
+      className={`py-20 px-6 md:px-20 scroll-mt-24 ${isDarkMode
+        ? 'bg-gradient-to-l from-[#0f1118] to-black text-white'
+        : 'bg-gradient-to-l from-[#f9f9f9] to-white text-black'
+        }`}
     >
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold">
+        <h2 className="text-3xl sm:text-4xl text-[#C49E5B] font-braven font-bold">
           Featured{' '}
           <span className="text-[#C49E5B]">Therapists</span>
         </h2>
         <p className={`mt-4 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
           Meet our certified wellness professionals
         </p>
-      </div>
+      </div >
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {therapists.map((therapist, index) => (
           <div
             key={index}
-            className={`rounded-2xl p-6 text-center shadow-md border ${
-              isDarkMode
-                ? 'bg-[#1a1c23] border-white/10'
-                : 'bg-white border-black/10'
-            }`}
+            className={`rounded-2xl p-6 text-center shadow-md border ${isDarkMode
+              ? 'bg-[#1a1c23] border-white/10'
+              : 'bg-white border-black/10'
+              }`}
           >
             {/* Avatar */}
             <div className="flex justify-center mb-4">
@@ -109,13 +107,12 @@ const FeaturedTherapists = () => {
                 {[...Array(5)].map((_, i) => (
                   <svg
                     key={i}
-                    className={`w-4 h-4 ${
-                      therapist.rating >= i + 1
-                        ? 'fill-yellow-400'
-                        : isDarkMode
+                    className={`w-4 h-4 ${therapist.rating >= i + 1
+                      ? 'fill-yellow-400'
+                      : isDarkMode
                         ? 'fill-gray-600'
                         : 'fill-gray-300'
-                    }`}
+                      }`}
                     viewBox="0 0 24 24"
                   >
                     <path d="M12 .587l3.668 7.431L24 9.587l-6 5.841 1.417 8.249L12 18.896 4.583 23.677 6 15.428 0 9.587l8.332-1.569z" />
@@ -123,9 +120,8 @@ const FeaturedTherapists = () => {
                 ))}
               </div>
               <span
-                className={`text-sm ${
-                  isDarkMode ? 'text-gray-300' : 'text-gray-600'
-                }`}
+                className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'
+                  }`}
               >
                 {therapist.rating.toFixed(1)}
               </span>
@@ -136,11 +132,10 @@ const FeaturedTherapists = () => {
               {therapist.tags.map((tag, i) => (
                 <span
                   key={i}
-                  className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    isDarkMode
-                      ? 'bg-[#2b2d35] text-[#C49E5B]'
-                      : 'bg-yellow-100 text-yellow-700'
-                  }`}
+                  className={`px-3 py-1 rounded-full text-xs font-medium ${isDarkMode
+                    ? 'bg-[#2b2d35] text-[#C49E5B]'
+                    : 'bg-yellow-100 text-yellow-700'
+                    }`}
                 >
                   {tag}
                 </span>
@@ -154,7 +149,7 @@ const FeaturedTherapists = () => {
           </div>
         ))}
       </div>
-    </section>
+    </section >
   );
 };
 

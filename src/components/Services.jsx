@@ -13,47 +13,53 @@ import { motion } from 'framer-motion';
 const services = [
   {
     title: 'Quick Reset',
-    description: 'An express escape—back, neck & shoulder focus to melt tension fast.',
+    description: 'An express immersion for back, neck, and shoulders — melting tension inminutes, awakening the senses.',
     prices: ['45 mins – £65'],
     icon: devineHand,
-    image: '/photo1.jpg'},
+    image: '/photo1.jpg'
+  },
   {
     title: 'Deep Comfort Massage',
-    description: 'Slow, deep, muscle-focused massage to release knots and restore balance.',
+    description: 'Slow, precise, muscle-focused indulgence that releases knots,restores balance, and quiets the mind.',
     prices: ['60 mins – £85', '90 mins – £120', '120 mins – £155', '150 mins – £190'],
     icon: dumbell,
-    image: '/photo2.jpg'  },
+    image: '/photo2.jpg'
+  },
   {
     title: 'Jet Lag Reset',
-    description: 'Boosts circulation, reduces swelling, and leaves your body light and refreshed.',
+    description: 'A circulation-boosting ritual that reduces swelling, reawakens energy,and leaves your body light and renewed',
     prices: ['60 mins – £95', '90 mins – £135', '120 mins – £175', '150 mins – £215'],
     icon: leave,
     image: '/photo3.jpg',
   },
   {
-    title: 'Goddess Glow Ritual',
-    description: 'Soft strokes with aromatic oils to calm the mind and leave skin radiant.',
+    title: 'The Executive Reset',
+    description: 'Deep tissue meets refined pressure-point therapy — a focused revival for mental clarity and physical ease.',
     prices: ['60 mins – £105', '90 mins – £145', '120 mins – £185'],
     icon: heart,
-    image: '/photo4.jpg'  },
-  {
-    title: 'The Executive Reset',
-    description: 'Deep tissue & pressure-point therapy for stress relief and mental clarity.',
-    prices: ['60 mins – £115', '90 mins – £155', '120 mins – £195'],
-    icon: cartWheel,
-    image: '/photo5.jpg'  },
+    image: '/photo4.jpg'
+  },
   {
     title: 'Couple’s Bespoke Escape',
-    description: 'Two therapists in sync for an intimate and relaxing home or hotel experience.',
+    description: 'Two therapists in perfect synchrony — an intimate shared indulgence for private moments.',
     prices: ['60 mins – £180', '90 mins – £250', '120 mins – £320'],
     icon: twoLeaves,
-    image: '/photo3.jpg'  },
+    image: '/photo3.jpg'
+  },
   {
     title: 'The Black Label Experience',
-    description: 'Full-body indulgence with warm oil infusion and flowing, luxurious strokes.',
-    prices: ['90 mins – £200', '120 mins – £270', '150 mins – £340'],
-    icon: devineHand,
-    image:'/photo3.jpg'  },
+    description: 'Full-body indulgence with warm oil infusion and flowing strokes — the ultimate Noira signature.',
+    prices: ['60 mins – £115', '90 mins – £155', '120 mins – £195'],
+    icon: cartWheel,
+    image: '/photo5.jpg'
+  },
+  // {
+  //   title: 'The Black Label Experience',
+  //   description: 'Full-body indulgence with warm oil infusion and flowing, luxurious strokes.',
+  //   prices: ['90 mins – £200', '120 mins – £270', '150 mins – £340'],
+  //   icon: devineHand,
+  //   image: '/photo3.jpg'
+  // },
 ];
 
 // Framer motion variants for a nice staggered fade-in effect
@@ -77,7 +83,7 @@ const Services = () => {
     >
       {/* Section Header */}
       <motion.div
-        className="text-center mb-12"
+        className="text-center mb-22"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -100,7 +106,7 @@ const Services = () => {
               relative flex flex-col h-full 
               rounded-3xl transition-all duration-300
               shadow-xl overflow-hidden
-              ${isDarkMode 
+              ${isDarkMode
                 ? 'bg-gradient-to-br from-[#0c0c0c] to-[#1a1a1a] border border-gray-800'
                 : 'bg-gray-100 border border-gray-300'
               }
@@ -123,7 +129,7 @@ const Services = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 transition-opacity duration-300"></div>
             </div>
-            
+
             {/* Main content wrapper with padding */}
             <div className="p-8 flex-grow">
               {/* Icon and Title Section */}
@@ -146,20 +152,24 @@ const Services = () => {
                 {service.description}
               </p>
 
+              <div>
+                <button className='bg-[#D59940] font-bold text-black rounded-full px-3 py-2'>Request Prices</button>
+              </div>
+
               {/* Prices List */}
-              <ul className="space-y-3">
-                {service.prices.map((price, idx) => (
-                  <li
-                    key={idx}
-                    className={`flex items-center text-sm font-braven text-gray-300`}
-                  >
-                    <FaArrowRight className="text-xs mr-2 text-yellow-500" /> 
-                    <span className="text-yellow-500 font-bold mr-1">{price.split(' – ')[0]}</span>
-                    <span className="text-gray-400"> – </span>
-                    <span className="text-white font-bold ml-1">{price.split(' – ')[1]}</span>
-                  </li>
-                ))}
-              </ul>
+              {/* <ul className="space-y-3"> */}
+              {/* {service.prices.map((price, idx) => ( */}
+              {/*   <li */}
+              {/*     key={idx} */}
+              {/*     className={`flex items-center text-sm font-braven text-gray-300`} */}
+              {/*   > */}
+              {/*     <FaArrowRight className="text-xs mr-2 text-yellow-500" /> */}
+              {/*     <span className="text-yellow-500 font-bold mr-1">{price.split(' – ')[0]}</span> */}
+              {/*     <span className="text-gray-400"> – </span> */}
+              {/*     <span className="text-white font-bold ml-1">{price.split(' – ')[1]}</span> */}
+              {/*   </li> */}
+              {/* ))} */}
+              {/* </ul> */}
             </div>
           </motion.div>
         ))}
