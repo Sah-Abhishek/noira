@@ -18,7 +18,8 @@ export default function MembershipSection() {
 
         {/* Description */}
         <p className="leading-relaxed">
-          a’s community.
+
+
 
           Reserved for discerning clients who expect more than exceptional.
         </p>

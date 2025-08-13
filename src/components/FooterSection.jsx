@@ -1,5 +1,6 @@
 import React from 'react';
-import noira from '/noira.png';
+
+import noira from '/noira.svg';
 import {
   FaInstagram,
   FaFacebookF,
@@ -25,10 +26,11 @@ const Footer = () => {
         {/* Logo & Socials */}
         <div>
           <div className="mb-4">
-            <img src={noira} alt="Noira Logo" className="w-32" />
+
+            <img src={noira} alt="Noira Logo" className="w-50" />
           </div>
 
-          <div className="flex gap-4 text-yellow-500 text-lg">
+          <div className="flex gap-4 text-[#C49E5B] text-lg">
             <a href="https://www.instagram.com/noira_london?igsh=MTNsN3E0YTJ0MDU3Zw==" aria-label="Instagram" className="hover:opacity-80">
               <FaInstagram />
             </a>
@@ -43,7 +45,7 @@ const Footer = () => {
 
         {/* Services */}
         <div>
-          <h4 className="text-yellow-500 font-semibold mb-4">Services</h4>
+          <h4 className="text-[#C49E5B] font-semibold mb-4">Services</h4>
           <ul className={`space-y-2 text-sm ${mutedText}`}>
             <li>Quick Reset</li>
             <li>Deep Comfort Massage</li>
@@ -56,22 +58,23 @@ const Footer = () => {
 
         {/* Contact */}
         <div>
-          <h4 className="text-yellow-500 font-semibold mb-4">Contact</h4>
+
+          <h4 className="text-[#C49E5B] font-semibold mb-4">Contact</h4>
           <ul className={`space-y-3 text-sm ${mutedText}`}>
             <li className="flex items-center gap-2">
-              <FaPhoneAlt className="text-yellow-500" />
+              <FaPhoneAlt className="text-[#C49E5B]" />
               +44 7350 700055
             </li>
             <li className="flex items-center gap-2">
-              <FaEnvelope className="text-yellow-500" />
+              <FaEnvelope className="text-[#C49E5B]" />
               info@noira.co.uk
             </li>
             <li className="flex items-center gap-2">
-              <FaClock className="text-yellow-500" />
+              <FaClock className="text-[#C49E5B]" />
               24/7 Available
             </li>
             <li className="flex items-center gap-2">
-              <FaMapMarkerAlt className="text-yellow-500" />
+              <FaMapMarkerAlt className="text-[#C49E5B]" />
               London & surrounding boroughs
             </li>
           </ul>

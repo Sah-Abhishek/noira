@@ -12,7 +12,9 @@ function AutoPlayVideo() {
       <div className="flex flex-col lg:flex-row justify-center items-center gap-8">
         <video
           className="w-full max-w-[720px] aspect-video rounded-lg shadow-lg"
-          src="/0_Massage_Spa_3840x2160.mp4"
+
+          src="/mavideo1.mp4"
+
           autoPlay
           muted
           loop
@@ -23,7 +25,8 @@ function AutoPlayVideo() {
 
         <video
           className="w-full max-w-[720px] aspect-video rounded-lg shadow-lg"
-          src="/0_Spa_Massage_3840x2160.mp4"
+
+          src="/mavideo3.mp4"
           autoPlay
           muted
           loop

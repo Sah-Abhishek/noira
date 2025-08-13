@@ -7,9 +7,8 @@ const ContactUs = () => {
   return (
     <section
       id="contact"
-      className={`${
-        isDarkMode ? 'bg-black text-white' : 'bg-white text-black'
-      } py-16 px-4 text-center`}
+      className={`${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'
+        } py-16 px-4 text-center`}
     >
       {/* Heading */}
       <h2 className="text-3xl md:text-4xl font-semibold mb-2">Contact Us</h2>
@@ -17,17 +16,16 @@ const ContactUs = () => {
 
       {/* Contact Card */}
       <div
-        className={`max-w-3xl mx-auto p-8 rounded-xl border ${
-          isDarkMode
-            ? 'bg-[#1a1a1a] border-[#C49E5B]'
-            : 'bg-gray-100 border-yellow-600'
-        } space-y-8`}
+
+        className={`max-w-3xl mx-auto p-8 rounded-xl border ${isDarkMode
+          ? 'bg-[#1a1a1a] border-[#C49E5B]'
+          : 'bg-gray-100 border-yellow-600'
+          } space-y-8`}
       >
         {/* Description */}
         <p
-          className={`text-sm md:text-base ${
-            isDarkMode ? 'text-[#dddddd]' : 'text-gray-700'
-          }`}
+          className={`text-sm md:text-base ${isDarkMode ? 'text-[#dddddd]' : 'text-gray-700'
+            }`}
         >
           We're here to bring luxury wellness to you, anytime you need it.
         </p>
@@ -36,14 +34,14 @@ const ContactUs = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
           {/* Email */}
           <div className="flex flex-col items-center">
-            <div className="bg-gradient-to-b from-yellow-400 to-yellow-600 rounded-full p-3 mb-2">
-              <MdEmail className="text-black text-2xl" />
+
+            <div className="bg-[#C49E5B] rounded-full p-3 mb-2">
+              <MdEmail className="text-black  text-2xl" />
             </div>
-            <p className="font-semibold text-[#FFD700]">Email</p>
+            <p className="font-semibold text-[#C49E5B]">Email</p>
             <p
-              className={`text-sm ${
-                isDarkMode ? 'text-[#ccc]' : 'text-gray-600'
-              }`}
+              className={`text-sm ${isDarkMode ? 'text-[#ccc]' : 'text-gray-600'
+                }`}
             >
               info@noira.co.uk
             </p>
@@ -51,14 +49,14 @@ const ContactUs = () => {
 
           {/* Location */}
           <div className="flex flex-col items-center">
-            <div className="bg-gradient-to-b from-yellow-400 to-yellow-600 rounded-full p-3 mb-2">
+
+            <div className="bg-[#C49E5B] rounded-full p-3 mb-2">
               <MdLocationOn className="text-black text-2xl" />
             </div>
-            <p className="font-semibold text-[#FFD700]">Service Areas</p>
+            <p className="font-semibold text-[#C49E5B]">Service Areas</p>
             <p
-              className={`text-sm ${
-                isDarkMode ? 'text-[#ccc]' : 'text-gray-600'
-              }`}
+              className={`text-sm ${isDarkMode ? 'text-[#ccc]' : 'text-gray-600'
+                }`}
             >
               London & surrounding
               <br />
@@ -68,14 +66,14 @@ const ContactUs = () => {
 
           {/* Hours */}
           <div className="flex flex-col items-center">
-            <div className="bg-gradient-to-b from-yellow-400 to-yellow-600 rounded-full p-3 mb-2">
+
+            <div className="bg-[#C49E5B] rounded-full p-3 mb-2">
               <MdAccessTime className="text-black text-2xl" />
             </div>
-            <p className="font-semibold text-[#FFD700]">Hours</p>
+            <p className="font-semibold text-[#C49E5B]">Hours</p>
             <p
-              className={`text-sm ${
-                isDarkMode ? 'text-[#ccc]' : 'text-gray-600'
-              }`}
+              className={`text-sm ${isDarkMode ? 'text-[#ccc]' : 'text-gray-600'
+                }`}
             >
               7:00 AM – 2:00 AM
             </p>

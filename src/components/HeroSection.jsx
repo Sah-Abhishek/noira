@@ -25,7 +25,7 @@ const HeroSection = () => {
         muted
         playsInline
       >
-        <source src="/HeroVideo2.mp4" type="video/mp4" />
+        <source src="/herovideo3.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 

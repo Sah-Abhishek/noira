@@ -12,21 +12,24 @@ const therapists = [
     title: 'Massage Therapist',
     rating: 4.9,
     tags: ['Deep Tissue', 'Swedish'],
-    image: sarahImg,
+
+    image: null,
   },
   {
     name: 'Michael Chen',
     title: 'Physiotherapist',
     rating: 4.8,
     tags: ['Sports Injury', 'Rehab'],
-    image: michaelImg,
+
+    image: null,
   },
   {
     name: 'Emma Rodriguez',
     title: 'Skincare Specialist',
     rating: 5.0,
     tags: ['Anti-aging', 'Hydrafacial'],
-    image: emmaImg,
+
+    image: null,
   },
   {
     name: 'David Kim',
