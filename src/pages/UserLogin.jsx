@@ -1,11 +1,10 @@
+
 import React, { useState } from "react";
-import '../index.css'
-import { zoomies } from 'ldrs'
-zoomies.register()
+import "../index.css";
+import { zoomies } from "ldrs";
+zoomies.register();
 import noira from "/noira.png";
 import {
-  FaUserMd,
-  FaUser,
   FaEnvelope,
   FaLock,
   FaEye,
@@ -26,12 +25,11 @@ const schema = Yup.object().shape({
   password: Yup.string().min(6, "Minimum 6 characters").required("Password is required"),
 });
 
-export default function AdminLogin() {
+export default function UserLogin() {
   const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-  const [role, setRole] = useState("therapist");
+  const [errorMsg, setErrorMsg] = useState("");
   const navigate = useNavigate();
-  const [errorMsg, setErrorMsg] = useState('');
 
   const {
     register,
@@ -42,36 +40,23 @@ export default function AdminLogin() {
   });
 
   const onSubmit = async (data) => {
-    const endpoint = "http://192.168.1.12:3000/auth/admin/login"
-    const payload = {
-      ...data,
-      role: role
-    }
-
+    const endpoint = "http://192.168.1.20:3000/auth/user/login";
     try {
       setIsLoading(true);
-      const response = await axios.post(endpoint, payload);
+      const response = await axios.post(endpoint, data);
       console.log("Login success:", response.data);
-      //TODO: handle success (e.g., redirect, save token)
-      if (response.status == 200) {
-        console.log("This is the email: ", data.email);
-        localStorage.setItem('userEmail', data.email);
-        navigate('/otpinput');
 
+      if (response.status === 200) {
+        localStorage.setItem("userEmail", data.email);
+        navigate("/dashboard"); // redirect to dashboard after login
       }
     } catch (error) {
       if (error.response) {
-        // Server responded with a status other than 2xx
-        setErrorMsg(`Login failed: ${error.response.data.message || error.response.statusText}`)
-        // alert(`Login failed: ${error.response.data.message || error.response.statusText}`);
+        setErrorMsg(`Login failed: ${error.response.data.message || error.response.statusText}`);
       } else if (error.request) {
-        // Request was made but no response received
-        setErrorMsg('No response from server. Please try again later.')
-        // alert("No response from server. Please try again later.");
+        setErrorMsg("No response from server. Please try again later.");
       } else {
-        // Something else caused the error
-        setErrorMsg(`Error: ${error.message}`)
-        // alert(`Error: ${error.message}`);
+        setErrorMsg(`Error: ${error.message}`);
       }
       setIsLoading(false);
     }
@@ -88,35 +73,12 @@ export default function AdminLogin() {
           <p className="text-gray-400 text-medium font-medium">Wellness Platform</p>
         </div>
 
-        {/* Role Tabs */}
-        <div className="flex w-full bg-[#2b2b2b] rounded-lg overflow-hidden mt-4">
-          <button
-            className={`w-1/2 py-2 text-sm font-medium flex items-center justify-center gap-2 ${role === "therapist"
-              ? "bg-yellow-500 text-black"
-              : "text-gray-400"
-              }`}
-            onClick={() => setRole("therapist")}
-          >
-            <FaUserMd /> Therapist
-          </button>
-          <button
-            className={`w-1/2 py-2 text-sm font-medium flex items-center justify-center gap-2 ${role === "admin"
-              ? "bg-yellow-500 text-black"
-              : "text-gray-400"
-              }`}
-            onClick={() => setRole("admin")}
-          >
-            <FaUser /> Admin
-          </button>
-        </div>
-
         {/* Form */}
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
-          {/* Email Input */}
+          {/* Email */}
           <div className="space-y-1">
             <label className="text-sm text-gray-300 flex items-center gap-2">
-              <span className="text-yellow-400">
-                <FaEnvelope /> </span> Email Address
+              <span className="text-yellow-400"><FaEnvelope /></span> Email Address
             </label>
             <input
               type="email"
@@ -124,16 +86,13 @@ export default function AdminLogin() {
               {...register("email")}
               className={`w-full px-4 py-3 rounded-md bg-[#2b2b2b] text-white placeholder-gray-500 outline-none focus:ring-2 ${errors.email ? "ring-red-500" : "focus:ring-yellow-500"}`}
             />
-            {errors.email && (
-              <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
-            )}
+            {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
           </div>
 
-          {/* Password Input */}
+          {/* Password */}
           <div className="space-y-1">
             <label className="text-sm text-gray-300 flex items-center gap-2">
-              <span className="text-yellow-400">
-                <FaLock /></span> Password
+              <span className="text-yellow-400"><FaLock /></span> Password
             </label>
             <div className="relative">
               <input
@@ -149,45 +108,42 @@ export default function AdminLogin() {
                 <FaEye />
               </span>
             </div>
-            {errors.password && (
-              <p className="text-red-500 text-sm mt-1">{errors.password.message}</p>
-            )}
+            {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password.message}</p>}
           </div>
 
           {/* Forgot Password */}
           <div className="text-right">
-            <a href="#" className="text-sm text-yellow-400 hover:underline">
-              Forgot Password?
-            </a>
+            <a href="#" className="text-sm text-yellow-400 hover:underline">Forgot Password?</a>
           </div>
 
-          {/* Sign In Button */}
+          {/* Login Button */}
           <button
             type="submit"
             className={`w-full font-semibold py-3 rounded-md flex items-center justify-center gap-2
-    ${isLoading
-                ? 'bg-black text-white cursor-not-allowed'
-                : 'bg-yellow-500 hover:bg-yellow-400 text-black'}
-  `}
-
+              ${isLoading ? "bg-black text-white cursor-not-allowed" : "bg-yellow-500 hover:bg-yellow-400 text-black"}`}
             disabled={isLoading}
           >
-            {isLoading ? <span>
-              <l-zoomies
-                size="80"
-                stroke="5"
-                bg-opacity="0.1"
-                speed="1.4"
-                color="yellow"
-
-              ></l-zoomies></span> : <span className="inline-flex items-center ">               <FaSignInAlt className="mr-2" />
-              Sign In</span>}
+            {isLoading ? (
+              <span>
+                <l-zoomies
+                  size="80"
+                  stroke="5"
+                  bg-opacity="0.1"
+                  speed="1.4"
+                  color="yellow"
+                ></l-zoomies>
+              </span>
+            ) : (
+              <span className="inline-flex items-center">
+                <FaSignInAlt className="mr-2" /> Login
+              </span>
+            )}
           </button>
           <h1 className="text-center text-sm text-red-500">{errorMsg}</h1>
         </form>
 
         {/* Or Divider */}
-        <div className="flex items-center gap-2 text-gray-400 text-sm">
+        <div className="flex items-center gap-2 text-gray-400 text-sm mt-4">
           <hr className="flex-1 border-gray-600" />
           Or continue with
           <hr className="flex-1 border-gray-600" />
@@ -203,27 +159,14 @@ export default function AdminLogin() {
           </button>
         </div>
 
-        {/* Footer */}
-        <div className="text-center text-xs text-gray-500 pt-6 space-y-2">
-          <div className="flex justify-center gap-4">
-            <a href="#" className="hover:underline">
-              Terms of Service
-            </a>
-            <a href="#" className="hover:underline">
-              Privacy Policy
-            </a>
-            <a href="#" className="hover:underline">
-              Support
-            </a>
-          </div>
-          <div>
-            Need help? Contact us at{" "}
-            <a href="mailto:support@noira.com" className="text-yellow-400">
-              support@noira.com
-            </a>
-          </div>
+        {/* Not signed up? */}
+        <div className="text-center text-sm text-gray-400 mt-4">
+          Don’t have an account?{" "}
+          <a href="/signup" className="text-yellow-400 hover:underline cursor-pointer">
+            Sign Up
+          </a>
         </div>
       </div>
-    </div >
+    </div>
   );
 }

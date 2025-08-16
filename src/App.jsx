@@ -10,7 +10,7 @@ function AppLayout() {
   const location = useLocation();
 
   // Add all paths where navbar should be hidden
-  const hideNavbarPaths = ['/adminlogin', '/otpinput'];
+  const hideNavbarPaths = ['/adminlogin', '/otpinput', '/usersignup', '/userlogin', '/therapistdashboard'];
 
   const shouldHideNavbar = hideNavbarPaths.includes(location.pathname);
 

@@ -10,6 +10,9 @@ import AdmiLogin from './pages/AdminLogin.jsx';
 import AdminDashoboard from './pages/AdminDashboard.jsx';
 import OtpInput from './pages/OtpInput.jsx';
 import ProtectedRoute from './components/ProtectedRoute.jsx';
+import UserSignup from './pages/UserSignup.jsx';
+import UserLogin from './pages/UserLogin.jsx';
+import TherapistDashboard from './pages/TherapistDashobard.jsx'
 
 const AppRoutes = () => {
   return (
@@ -21,14 +24,17 @@ const AppRoutes = () => {
       <Route path="/about" element={<AboutPage />} />
       <Route path="/adminlogin" element={<AdmiLogin />} />
       <Route path="/otpinput" element={<OtpInput />} />
+      <Route path="/usersignup" element={<UserSignup />} />
+      <Route path="/userlogin" element={<UserLogin />} />
 
       {/* <Route path="/contact" element={<ContactPage />} /> */}
       {/* <Route path="/services" element={<ServicesPage />} /> */}
 
 
       <Route path="/admindashboard" element={<ProtectedRoute ><AdminDashoboard /></ProtectedRoute>} />
+      <Route path="/therapistdashboard" element={<TherapistDashboard />} />
 
-    </Routes>
+    </Routes >
   );
 };
 

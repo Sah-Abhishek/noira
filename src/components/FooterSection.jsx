@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
 
           <div className="flex gap-4 text-[#C49E5B] text-lg">
-            <a href="https://www.instagram.com/noira_london?igsh=MTNsN3E0YTJ0MDU3Zw==" aria-label="Instagram" className="hover:opacity-80">
+            <a href="#" aria-label="Instagram" className="hover:opacity-80">
               <FaInstagram />
             </a>
             <a href="#" aria-label="Facebook" className="hover:opacity-80">

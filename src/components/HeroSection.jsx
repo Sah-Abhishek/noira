@@ -40,8 +40,8 @@ const HeroSection = () => {
         animate="visible"
       >
         {/* Tagline */}
-        <h1 className="text-lg sm:text-xl md:text-2xl font-braven font-semibold mb-2">
-          <span className="text-2xl sm:text-3xl">#1</span> Luxury mobile massage brand in London and the UK
+        <h1 className="text-lg sm:text-xl md:text-2xl text-[#C49E5B] font-braven font-semibold mb-2">
+          <span className="text-2xl sm:text-4xl text-[#C49E5B]">#1</span> Luxury mobile massage brand in London and the UK
         </h1>
 
         {/* Logo */}
